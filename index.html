@@ -54,6 +54,22 @@
                 <td>I would spend 3 days to a week here as well</td>
             </tr>
         </table>
+        <hr>
+        <h2>Code Display</h2>
+        <blockquote cite="https://stackoverflow.com/questions/10022305/remove-posts-from-a-specific-category-from-homepages" >
+            How to I can remove posts from a specific category from homepages 
+            in wordpress? I want to do it by category's name or id or ...</blockquote>
+            <a href="https://stackoverflow.com/questions/10022305/remove-posts-from-a-specific-category-from-homepages">Source</a> 
+        <pre>
+            &lt?php query_posts('cat=-3'); ?&gt;
+
+            &lt?php if (have_posts()) : ?&gt
+            &lt?php while (have_posts()) : the_post(); &gt
+                &lth3&gt&lt/h3&gt
+                &ltp>&lt?php the_time('F jS, Y') ?>&lt/p&gt
+                &lt?php the_content(); ?&gt
+            &lt?php endwhile; ?&gt
+        </pre>
     </body>
     <footer>
         <a href="aboutme.html">About Me</a> 
